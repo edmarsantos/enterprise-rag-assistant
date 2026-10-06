@@ -1,0 +1,30 @@
+spring:
+
+  application:
+    name: enterprise-rag-assistant
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ragdb
+    username: ${DB_USERNAME:raguser}
+    password: ${DB_PASSWORD:ragpassword}
+    driver-class-name: org.postgresql.Driver
+
+  flyway:
+    enabled: true
+
+server:
+  port: 8080
+
+management:
+
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - info
+          - metrics
+
+  endpoint:
+    health:
+      show-details: always
