@@ -1,4 +1,4 @@
-ervices:
+services:
 
   postgres:
     image: pgvector/pgvector:pg16
