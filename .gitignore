@@ -31,3 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+#secrets
+src/main/resources/secrets.properties
+
+target/
+
+# pasta gerada por build com propriedade Maven nao resolvida
+/${project.build.directory}/

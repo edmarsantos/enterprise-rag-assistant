@@ -1,5 +1,8 @@
 spring:
 
+  config:
+    import: classpath:secrets.properties
+
   application:
     name: enterprise-rag-assistant
 
@@ -11,6 +14,23 @@ spring:
 
   flyway:
     enabled: true
+
+  ai:
+
+    model:
+      chat: none
+      embedding: ollama
+      image: none
+      moderation: none
+      audio:
+        speech: none
+        transcription: none
+
+    ollama:
+      base-url: http://localhost:11434
+
+      embedding:
+        model: mxbai-embed-large
 
 server:
   port: 8080
